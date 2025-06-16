@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">DavidMudancas</string>
+    <string name="title_activity_main">DavidMudancas</string>
+    <string name="package_name">com.couto.davidmudancas</string>
+    <string name="custom_url_scheme">com.couto.davidmudancas</string>
+</resources>
