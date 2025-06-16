@@ -1,116 +1,32 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Orçamento de Mudança</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<!-- OpenRouteService JS -->
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Awesome Capacitor App</title>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
 
-</head>
-<body>
-  <div class="container">
+    <script
+      type="module"
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
+    ></script>
 
-    <!-- Logo estilizado -->
-    <div class="logo" aria-label="Logo David Couto Mudanças">
-      <div id="mapa" style="height: 300px; margin-top: 20px;"></div>
-<p id="distancia"></p>
+    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <meta name="theme-color" content="#31d53d" />
+  </head>
+  <body>
+    <capacitor-welcome></capacitor-welcome>
 
-      
-      <div>
-        <div>David Couto</div>
-        <img src="img/David.png" alt="Logo da empresa" style="width: 150px; height: auto;" />
-      </div>
-    </div>
-
-    <h1>Solicitação de Mudança</h1>
-
-    <form id="mudancaForm" onsubmit="return false;">
-      <fieldset>
-        <legend><strong>Dados do Cliente</strong></legend>
-
-        <label for="nomeCliente">Nome:</label>
-        <input type="text" id="nomeCliente" required />
-
-        <label for="dataMudanca">Data da Mudança:</label>
-        <input type="date" id="dataMudanca" required />
-
-        <label for="bairroOrigem">Bairro de Origem:</label>
-        <input type="text" id="bairroOrigem" required />
-
-        <label for="bairroDestino">Bairro de Destino:</label>
-        <input type="text" id="bairroDestino" required />
-
-        <label for="orcamento">Orçamento Estimado (R$):</label>
-        <input type="number" id="orcamento" min="0" step="0.01" required />
-      </fieldset>
-
-   <fieldset>
-  <legend><strong>Selecione os Itens</strong></legend>
-
-  <h3>💺 Sala</h3>
-  <label><input type="checkbox" name="item" value="Sofá" data-volume="2.5"> Sofá</label>
-  <label><input type="checkbox" name="item" value="Hack" data-volume="0.9"> Hack</label>
-  <label><input type="checkbox" name="item" value="TV de 55&quot;" data-volume="0.6"> TV de 55"</label>
-  <label><input type="checkbox" name="item" value="Estante" data-volume="1.5"> Estante</label>
-  <label><input type="checkbox" name="item" value="Ventilador" data-volume="0.5"> Ventilador</label>
-
-  <h3>🍽️ Cozinha</h3>
-  <label><input type="checkbox" name="item" value="Geladeira" data-volume="1.2"> Geladeira</label>
-  <label><input type="checkbox" name="item" value="Fogão" data-volume="0.8"> Fogão</label>
-  <label><input type="checkbox" name="item" value="Microondas" data-volume="0.3"> Microondas</label>
-  <label><input type="checkbox" name="item" value="Mesa" data-volume="1.0"> Mesa</label>
-  <label><input type="checkbox" name="item" value="Cadeira" data-volume="0.5"> Cadeira</label>
-
-  <h3>🛏️ Quarto</h3>
-  <label><input type="checkbox" name="item" value="Cama" data-volume="2.0"> Cama</label>
-  <label><input type="checkbox" name="item" value="Armário" data-volume="2.3"> Armário</label>
-  <label><input type="checkbox" name="item" value="Guarda-roupa" data-volume="2.8"> Guarda-roupa</label>
-  <label><input type="checkbox" name="item" value="Cômoda" data-volume="1.6"> Cômoda</label>
-  <label><input type="checkbox" name="item" value="Berço" data-volume="1.3"> Berço</label>
-
-  <h3>🛁 Banheiro</h3>
-  <label><input type="checkbox" name="item" value="Armário de Banheiro" data-volume="0.6"> Armário de Banheiro</label>
-  <label><input type="checkbox" name="item" value="Cesto de Roupas" data-volume="0.3"> Cesto de Roupas</label>
-
-  <h3>🧺 Área de Serviço</h3>
-  <label><input type="checkbox" name="item" value="Máquina de Lavar" data-volume="1.0"> Máquina de Lavar</label>
-  <label><input type="checkbox" name="item" value="Freezer" data-volume="1.9"> Freezer</label>
-  <label><input type="checkbox" name="item" value="Lavadora de Alta Pressão" data-volume="0.7"> Lavadora de Alta Pressão</label>
-
-  <h3>🖥️ Escritório</h3>
-  <label><input type="checkbox" name="item" value="Notebook" data-volume="0.2"> Notebook</label>
-  <label><input type="checkbox" name="item" value="Impressora" data-volume="0.4"> Impressora</label>
-  <label><input type="checkbox" name="item" value="Mesa de Escritório" data-volume="1.2"> Mesa de Escritório</label>
-  <label><input type="checkbox" name="item" value="Cadeira de Escritório" data-volume="0.7"> Cadeira de Escritório</label>
-
-  <h3>🚗 Garagem / Quintal</h3>
-  <label><input type="checkbox" name="item" value="Bicicleta" data-volume="1.1"> Bicicleta</label>
-  <label><input type="checkbox" name="item" value="Ferramentas" data-volume="0.6"> Caixa de Ferramentas</label>
-  <label><input type="checkbox" name="item" value="Escada" data-volume="1.0"> Escada</label>
-  <label><input type="checkbox" name="item" value="Ar-condicionado" data-volume="1.4"> Ar-condicionado</label>
-</fieldset>
-
-
-      <div class="botoes" style="margin-top: 1em;">
-        <button type="button" onclick="calcularMudanca()">Calcular</button>
-        <button type="button" onclick="enviarWhatsAppEPrepararPDF()">Enviar para o WhatsApp e Preparar PDF</button>
-        <div id="mapa" style="height: 300px; margin-top: 20px;"></div>
-<p id="distancia" style="font-weight: bold; font-size: 16px;"></p>
-
-        <button type="button" id="btnSalvarPDF" style="display:none;" onclick="salvarPDF()">Salvar PDF do Orçamento</button>
-      </div>
-    </form>
-
-    <div id="resultado" class="resultado" style="margin-top: 1em;"></div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="./js/capacitor-welcome.js" type="module"></script>
+  </body>
 </html>
