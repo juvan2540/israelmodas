@@ -1,0 +1,106 @@
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #f9f9f9;
+}
+
+header {
+  background: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.btn-carrinho {
+  background: green;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  position: absolute;
+  right: 1rem;
+  top: 1.2rem;
+  font-size: 0.9rem;
+}
+
+main.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.produto {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 10px #ccc;
+  transition: transform 0.2s ease-in-out;
+}
+
+.produto:hover {
+  transform: scale(1.02);
+}
+
+.produto img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  background: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#lista-carrinho {
+  padding: 1rem;
+}
+
+#finalizar {
+  display: block;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  background: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .btn-carrinho {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  button, #finalizar {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .produto {
+    padding: 0.8rem;
+  }
+}

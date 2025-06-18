@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JJ Eletrônicos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛒 JJ Eletrônicos</h1>
+    <a href="carrinho.html" class="btn-carrinho">Ver Carrinho</a>
+  </header>
+
+  <main class="produtos">
+    <div class="produto">
+      <img src="logo.png" alt="Cabo USB Tipo C">
+      <h2>Cabo USB Tipo-C</h2>
+      <p>R$ 25,00</p>
+      <button onclick="adicionarCarrinho('Cabo USB Tipo-C', 25)">Adicionar</button>
+    </div>
+
+    <div class="produto">
+      <img src="logo.png" alt="Caixinha Bluetooth">
+      <h2>Caixinha Bluetooth</h2>
+      <p>R$ 90,00</p>
+      <button onclick="adicionarCarrinho('Caixinha Bluetooth', 90)">Adicionar</button>
+    </div>
+
+    <div class="produto">
+      <img src="logo.png" alt="Cabo V8">
+      <h2>Cabo V8</h2>
+      <p>R$ 20,00</p>
+      <button onclick="adicionarCarrinho('Cabo V8', 20)">Adicionar</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
