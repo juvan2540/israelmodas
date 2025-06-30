@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Israel Modas - Moda Feminina de Qualidade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-tshirt text-2xl text-pink-600 mr-2"></i>
+                <h1 class="text-2xl font-bold text-pink-600">Israel Modas</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-800 hover:text-pink-600 font-medium">Início</a>
+                <a href="#" class="text-gray-800 hover:text-pink-600 font-medium">Novidades</a>
+                <a href="#" class="text-gray-800 hover:text-pink-600 font-medium">Coleções</a>
+                <a href="#" class="text-gray-800 hover:text-pink-600 font-medium">Promoções</a>
+                <a href="#" class="text-gray-800 hover:text-pink-600 font-medium">Contato</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-800 hover:text-pink-600">
+                    <i class="fas fa-search text-xl"></i>
+                </button>
+                <button class="text-gray-800 hover:text-pink-600 relative">
+                    <i class="fas fa-shopping-bag text-xl"></i>
+                    <span class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                </button>
+                <button class="md:hidden text-gray-800" id="mobile-menu-button">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white py-2 px-4 shadow-md" id="mobile-menu">
+            <a href="#" class="block py-2 text-gray-800 hover:text-pink-600">Início</a>
+            <a href="#" class="block py-2 text-gray-800 hover:text-pink-600">Novidades</a>
+            <a href="#" class="block py-2 text-gray-800 hover:text-pink-600">Coleções</a>
+            <a href="#" class="block py-2 text-gray-800 hover:text-pink-600">Promoções</a>
+            <a href="#" class="block py-2 text-gray-800 hover:text-pink-600">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-image flex items-center justify-center text-center text-white animate-fadeIn">
+        <div class="px-4">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">Nova Coleção Verão 2025</h2>
+            <p class="text-xl md:text-2xl mb-8">Descubra peças exclusivas para realçar sua beleza</p>
+            <button class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                Compre Agora
+            </button>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossas Categorias</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Vestidos" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-60 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">Vestidos</h3>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80" alt="Blusas" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-60 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">Blusas</h3>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Calças" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-60 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">Calças</h3>
+                    </div>
+                </div>
+                
+                <div class="relative overflow-hidden rounded-lg shadow-md group">
+                    <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Acessórios" class="w-full h-48 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-60 transition duration-300">
+                        <h3 class="text-white text-xl font-bold">Acessórios</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800">Destaques</h2>
+                <a href="#" class="text-pink-600 hover:text-pink-800 font-medium">Ver todos →</a>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Vestido Floral" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-pink-600 text-white text-xs font-bold px-2 py-1 rounded-full">NOVO</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">Vestido Floral</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(48)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-pink-600">R$ 129,90</span>
+                            <button class="bg-pink-600 hover:bg-pink-700 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80" alt="Blusa Manga Longa" class="w-full h-64 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">-30%</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">Blusa Manga Longa</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(32)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-lg font-bold text-pink-600">R$ 79,90</span>
+                                <span class="text-sm text-gray-500 line-through ml-1">R$ 114,90</span>
+                            </div>
+                            <button class="bg-pink-600 hover:bg-pink-700 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Calça Jeans" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">Calça Jeans Skinny</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(64)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-pink-600">R$ 149,90</span>
+                            <button class="bg-pink-600 hover:bg-pink-700 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="Conjunto Verão" class="w-full h-64 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">Conjunto Verão</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(28)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-pink-600">R$ 169,90</span>
+                            <button class="bg-pink-600 hover:bg-pink-700 text-white rounded-full w-10 h-10 flex items-center justify-center">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between">
+                <div class="text-white mb-6 md:mb-0 md:mr-8">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-3">Frete Grátis em Compras Acima de R$ 200</h2>
+                    <p class="text-lg">Aproveite esta promoção por tempo limitado!</p>
+                </div>
+                <button class="bg-white text-pink-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                    Compre Agora
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">O Que Nossas Clientes Dizem</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Adorei o vestido que comprei na Israel Modas! O material é de ótima qualidade e o caimento ficou perfeito. Com certeza voltarei a comprar!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Ana Silva" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Ana Silva</h4>
+                            <p class="text-sm text-gray-500">São Paulo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Atendimento excelente e produtos lindos! Comprei várias peças e todas vieram exatamente como nas fotos. Recomendo muito!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Juliana Santos" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Juliana Santos</h4>
+                            <p class="text-sm text-gray-500">Rio de Janeiro</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"A entrega foi super rápida e a blusa que comprei é ainda mais bonita pessoalmente. Amei o atendimento e já estou de olho em outras peças!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Camila Oliveira" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Camila Oliveira</h4>
+                            <p class="text-sm text-gray-500">Belo Horizonte</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 newsletter-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Receba Nossas Novidades</h2>
+            <p class="text-xl mb-8">Cadastre-se para receber promoções exclusivas e novidades da Israel Modas</p>
+            
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Seu melhor e-mail" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-800">
+                <button class="bg-pink-600 hover:bg-pink-700 px-6 py-3 rounded-r-lg font-bold transition duration-300">
+                    Cadastrar
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-tshirt text-2xl text-pink-600 mr-2"></i>
+                        <h3 class="text-2xl font-bold">Israel Modas</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Moda feminina com qualidade e estilo para mulheres que valorizam o conforto sem abrir mão da elegância.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-pink-600"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links Úteis</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Sobre Nós</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Nossas Lojas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Política de Privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Termos de Serviço</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Trocas e Devoluções</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Minha Conta</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Minha Conta</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Meus Pedidos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Lista de Desejos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-600">Newsletter</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-pink-600 mr-2"></i>
+                            <span class="text-gray-400">Av. Paulista, 1000 - São Paulo/SP</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-pink-600 mr-2"></i>
+                            <span class="text-gray-400">(11) 1234-5678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-pink-600 mr-2"></i>
+                            <span class="text-gray-400">contato@israelmodas.com.br</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock text-pink-600 mr-2"></i>
+                            <span class="text-gray-400">Seg-Sex: 9h-18h</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Israel Modas. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+  
+</body>
+</html>
